@@ -1,0 +1,22 @@
+package collection.deque.test;
+
+import collection.deque.test.stack.BrowerHistory;
+
+public class BrowerHistoryTest {
+
+    public static void main(String[] args) {
+        BrowerHistory brower = new BrowerHistory();
+
+        // 사용자가 웹페이지를 방문하는 시나리오
+        brower.visitPage("youtube.com");
+        brower.visitPage("google.com");
+        brower.visitPage("facebook.com");
+
+        // 뒤로 가기 기능을 사용하는 시나리오
+        String currentPage1 = brower.goBack();
+        System.out.println("currentPage1 = " + currentPage1);
+
+        String currentPage2 = brower.goBack();
+        System.out.println("currentPage2 = " + currentPage2);
+    }
+}
